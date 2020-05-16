@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
 });
 
 app.put('/inc', function (req, res) {
-  count += 6;
+  count += 50;
   res.status(204).end();
 });
 
