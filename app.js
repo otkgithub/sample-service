@@ -19,7 +19,10 @@ var app = express();
 app.use(morgan('[:date[iso]] :method :url\t:status'));
 
 app.get('/', function (req, res) {
-  res.status(200).send({count: count});
+  res.status(200).send({
+    count: count,
+    service: "serviceA"
+  });
 });
 
 app.put('/inc', function (req, res) {
