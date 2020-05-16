@@ -35,5 +35,13 @@ app.put('/dec', function (req, res) {
   res.status(204).end();
 });
 
+
+app.get('*', function (req, res) {
+  res.status(200).send({
+    other: "none",
+    service: "serviceA"
+  });
+});
+
 app.listen(PORT);
 console.log('Running on http://localhost:' + PORT);
